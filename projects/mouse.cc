@@ -158,15 +158,15 @@ private:
 
 class MouseSimulation : public Simulation
 {
-	GeneticAlgorithm<NeuralMouse> theGA;
-	Population<NeuralMouse> theMice;
-	// Group<NeuralMouse> theMice;
-	// Group<Cheese> theCheeses;
+	GeneticAlgorithm<EvoMouse> theGA;
+	Population<EvoMouse> theMice;
+//	Group<Mouse> theMice;
+	Group<Cheese> theCheeses;
 
 public:
 	MouseSimulation():
 	theGA(0.7f, 0.05f),	// Crossover probability of 0.7, mutation probability of 0.05
-	theMice(30),		// 30 mice are in the population.
+//	theMice(30),		// 30 mice are in the population.
 	theMice(30, theGA), // 30 mice are in the population.
 	theCheeses(30)		// 30 cheeses are around at one time.
 	{
